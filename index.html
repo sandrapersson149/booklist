@@ -6,46 +6,91 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Booklist</title>
-  <script src="app.js" defer></script>
+  <script src="app.js"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
   <div id="wrapper">
+
     <header>
       <div id="page-banner">
-        <h1 class="title">Bookorama</h1>
+        <h1 class="title">The ultimate book list</h1>
         <form id="search-books">
           <input type="text" placeholder="Search books..." />
         </form>
       </div>
     </header>
+
     <div id="book-list">
-      <h2 class="title">Books to Read</h2>
+      <h2 class="title">My booklist</h2>
       <ul>
         <li>
-          <span class="name">Name of the Wind</span>
+          <span class="name">The Martian</span>
+          <span class="writtenBy"> written by </span>
+          <span class="auther">Andy Weir</span>
           <span class="delete">delete</span>
         </li>
         <li>
-          <span class="name">The Wise Man's Fear</span>
+          <span class="name">Burn after writing</span>
+          <span class="writtenBy"> written by </span>
+          <span class="auther">Sharon Jones</span>
           <span class="delete">delete</span>
         </li>
         <li>
-          <span class="name">Kafka on the Shore</span>
+          <span class="name">They Both Die at the End</span>
+          <span class="writtenBy"> written by </span>
+          <span class="auther">Adam Silvera</span>
           <span class="delete">delete</span>
         </li>
         <li>
-          <span class="name">The Master and the Margarita</span>
+          <span class="name">Shadow and bone</span>
+          <span class="writtenBy"> written by </span>
+          <span class="auther">Leigh Bardugo</span>
+          <span class="delete">delete</span>
+        </li>
+        <li>
+          <span class="name">The Missing Sister</span>
+          <span class="writtenBy"> written by </span>
+          <span class="auther">Lucinda Riley</span>
+          <span class="delete">delete</span>
+        </li>
+        <li>
+          <span class="name">Where the Crawdads Sing</span>
+          <span class="writtenBy"> written by </span>
+          <span class="auther">Delia Owens</span>
           <span class="delete">delete</span>
         </li>
       </ul>
+
+      <input type="checkbox" id="hide" />
+      <label for="hide">Hide all books</label>
     </div>
+
     <form id="add-book">
-      <input type="text" placeholder="Add a book..." />
-      <button>Add</button>
+      <input class="name" type="text" placeholder="Bookname" />
+      <input class="auther" type="text" placeholder="Auther" />
+      <button>Add!</button>
     </form>
 
+    <div id="tabbed-content">
+      <ul class="tabs">
+        <li data-target="#about" class="active">About</li>
+        <li data-target="#contact">Contact</li>
+      </ul>
+      <div class="panel active" id="about">
+        <p>Books books books</p>
+        <p>I love to read. Every year I read at least 10 books. Sometimes even more! During the summer vacation I like
+          to buy a couple of books so I know I have enough to last me all summer long.</p>
+      </div>
+      <div class="panel" id="contact">
+        <p>Lets talk about books!</p>
+        <p>Email me your favorite books, or just your thoughts on my booklist at bookfanatic@readallot.com</p>
+      </div>
+    </div>
   </div>
 </body>
 
